@@ -4,13 +4,13 @@
   "version": "0.0.0",
   "scripts": {
     "develop": "svelte-kit dev",
-    "build": "svelte-kit build",
+    "build": "npm run clear && svelte-kit build",
     "preview": "svelte-kit preview",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
     "lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
     "format": "prettier --write --plugin-search-dir=. .",
-    "clear": "rimraf build .svelte-kit",
+    "clear": "rimraf build .svelte-kit cdk.out",
     "lint:fix": "eslint --fix ./src/**/*.{ts,svelte}",
     "deploy": "export $(cat .env | xargs) && cdk deploy --all --require-approval never --app cdk-cdn-construct"
   },

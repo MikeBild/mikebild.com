@@ -1,4 +1,4 @@
-import projects from './_projects';
+import projects from '$lib/projects';
 
 export function get() {
   return {

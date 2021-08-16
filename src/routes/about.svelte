@@ -1,10 +1,12 @@
 <script context="module" lang="ts">
   export async function load({ page, fetch }) {
-    const res = await fetch('/about.json');
+    const res = await fetch('about.json');
+    const projects = await res.json();
+
     if (res.ok) {
       return {
         props: {
-          projects: await res.json(),
+          projects,
         },
       };
     }
@@ -30,12 +32,8 @@
     <div style="height: 60vh;">
       <!--Title-->
       <div class="font-sans">
-        <h1
-          class="font-sans break-normal text-white pt-6 
-          pb-2 text-3xl md:text-4xl"
-        >
-          About me
-        </h1>
+        <h1 class="font-sans break-normal text-white pt-6 
+          pb-2 text-3xl md:text-4xl">About me</h1>
       </div>
       <p class="py-6">
         I'm a software developer who thinks of programming as a form of craft, engineering and art! I want to make software to facilitate the creation and running of cooperatives.

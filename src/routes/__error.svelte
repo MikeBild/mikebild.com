@@ -1,15 +1,26 @@
-<script lang="ts">
+<script lang="ts" context="module">
+  export function load({ error, status }) {
+    return {
+      props: {
+        error,
+        status,
+      },
+    };
+  }
+</script>
+
+<script>
   export let status;
   export let error;
 </script>
 
-<svelte:head>
-  <title>{status}</title>
-</svelte:head>
+<div style="color: white">
+  <h1>{status}</h1>
 
-<h1>{status}</h1>
+  <p>{error.message}</p>
 
-<p>{error.message}</p>
+  <pre>{JSON.stringify(error, null, 4)}</pre>
+</div>
 
 <style>
   h1,
