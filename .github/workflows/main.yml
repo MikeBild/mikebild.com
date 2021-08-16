@@ -19,9 +19,6 @@ jobs:
       - name: Install
         run: npm install
 
-      - name: Prepare
-        run: npm run lerna
-
       - name: Build
         run: npm run build
         env:
