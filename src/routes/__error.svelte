@@ -9,17 +9,16 @@
   }
 </script>
 
-<script>
+<script lang="ts">
   export let status;
   export let error;
 </script>
 
-<div style="color: white">
-  <h1>{status}</h1>
-
-  <p>{error.message}</p>
-
-  <pre>{JSON.stringify(error, null, 4)}</pre>
+<div class="h-full flex flex-col justify-center text-center my-auto mx-auto">
+  <div class="text-white">
+    <h1>{status}</h1>
+    <p>{error.message}</p>
+  </div>
 </div>
 
 <style>

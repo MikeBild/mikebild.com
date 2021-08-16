@@ -1,19 +1,11 @@
 <script context="module" lang="ts">
+  import projects from '$lib/projects';
+
   export async function load({ page, fetch }) {
-    const res = await fetch('about.json');
-    const projects = await res.json();
-
-    if (res.ok) {
-      return {
-        props: {
-          projects,
-        },
-      };
-    }
-
     return {
-      status: res.status,
-      error: new Error(`Could not load about.json`),
+      props: {
+        projects,
+      },
     };
   }
 </script>
@@ -30,10 +22,13 @@
 <div class="content-grid">
   <div class="content w-full text-xl leading-normal text-white" style="font-family: Georgia, serif;">
     <div style="height: 60vh;">
-      <!--Title-->
       <div class="font-sans">
-        <h1 class="font-sans break-normal text-white pt-6 
-          pb-2 text-3xl md:text-4xl">About me</h1>
+        <h1
+          class="font-sans break-normal text-white pt-6 
+          pb-2 text-3xl md:text-4xl"
+        >
+          About me
+        </h1>
       </div>
       <p class="py-6">
         I'm a software developer who thinks of programming as a form of craft, engineering and art! I want to make software to facilitate the creation and running of cooperatives.
@@ -57,7 +52,6 @@
   </div>
 </div>
 
-<!--/container-->
 <style>
   .content-grid {
     display: grid;
