@@ -3,13 +3,13 @@
 </svelte:head>
 
 <div class="h-full flex flex-col justify-center text-center my-auto mx-auto">
-  <p class="text-base text-gray-400 md:text-xl">Welcome!</p>
+  <p class="text-base text-gray-400 md:text-xl">Welcome to</p>
   <h2 class="headline tracking-tight leading-10 font-extrabold text-white mt-3 md:mt-10">
     <a href="https://github.com/mikebild" class="leading-6 text-blue-500 hover:text-blue-300"> coding </a>
     <br class="xl:hidden" />
     inspirations
   </h2>
-  <p class="mt-3 md:mt-10 text-base text-gray-400 md:text-xl">teaching yourself any skill</p>
+  <p class="mt-3 md:mt-10 text-base text-gray-400 md:text-xl">to teach yourself at any skill</p>
   <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
     <div class="rounded-md">
       <a
