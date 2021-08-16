@@ -4,3 +4,6 @@ node_modules
 /package
 /build
 .env*
+file:
+cdk.out
+cdk.context.json
