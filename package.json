@@ -12,7 +12,8 @@
     "format": "prettier --write --plugin-search-dir=. .",
     "clear": "rimraf build .svelte-kit cdk.out",
     "lint:fix": "eslint --fix ./src/**/*.{ts,svelte}",
-    "deploy": "export $(cat .env | xargs) && cdk deploy --all --require-approval never --app cdk-cdn-construct",
+    "deploy": "cdk deploy --all --require-approval never --app cdk-cdn-construct",
+    "deploy:local": "export $(cat .env | xargs) && npm run deploy",
     "destroy": "export $(cat .env | xargs) && cdk destroy --all --app cdk-cdn-construct"
   },
   "devDependencies": {
