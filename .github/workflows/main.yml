@@ -21,7 +21,6 @@ jobs:
 
       - name: Build
         run: npm run build
-        env:
 
       - name: AWS-CDK Deploy
         run: npm run deploy
