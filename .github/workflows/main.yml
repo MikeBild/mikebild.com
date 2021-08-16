@@ -22,11 +22,6 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          CDK_DEFAULT_REGION: eu-central-1
-          CDK_DEFAULT_ACCOUNT: default
-          CDK_CDN_NAME: me
-          CDK_CDN_PATH: ./build
-          CDK_CDN_DOMAIN: mikebild.com
 
       - name: AWS-CDK Deploy
         run: npm run deploy
@@ -34,3 +29,7 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: 'eu-central-1'
+          CDK_DEFAULT_ACCOUNT: default
+          CDK_CDN_NAME: me
+          CDK_CDN_PATH: ./build
+          CDK_CDN_DOMAIN: mikebild.com
