@@ -1,12 +1,11 @@
 export default [
   {
-    enabled: false,
-    title: '',
-    description: '',
+    title: 'My Project',
+    description: 'Example ...',
     client: {
-      name: '',
-      url: '',
-      caption: '',
+      name: 'Company',
+      url: 'https://example.com',
+      caption: '...',
     },
     tags: [{ name: 'Svelte', link: 'https://svelte.dev/' }],
   },
