@@ -1,8 +1,8 @@
 ---
-title: 'Making a static blog with svelte-kit, tailwind and markdown'
+title: 'Making a static blog with SvelteKit, tailwind and markdown'
 slug: 'about_this_site'
 outline: 'A brief reference to the technologies used to create this website'
-tags: [{ name: 'Svelte Kit', link: 'https://kit.svelte.dev/' }, { name: 'Tailwind CSS', link: 'https://www.tailwindcss.com' }, { name: 'Markdown', link: 'https://www.markdownguide.org/' }]
+tags: [{ name: 'SvelteKit', link: 'https://kit.svelte.dev/' }, { name: 'Tailwind CSS', link: 'https://www.tailwindcss.com' }, { name: 'Markdown', link: 'https://www.markdownguide.org/' }]
 published_at: '3 April 2021'
 ---
 
@@ -25,71 +25,67 @@ published_at: '3 April 2021'
 
 ## TLDR
 
-This site was created using [Svelte-kit](https://kit.svelte.dev/), [Tailwind CSS](https://www.tailwindcss.com) and [markdown](https://www.markdownguide.org/).
-If you're interested, you can check [the source code](https://github.com/happysalada/svelte.megzari.com)
+This site was created using [SvelteKit](https://kit.svelte.dev/), [Tailwind CSS](https://www.tailwindcss.com) and [markdown](https://www.markdownguide.org/).
+If you're interested, you can check [the source code](https://github.com/mikebild/mikebild.com)
 
 ## Context
 
-Svelte kit is the latest development from [Svelte](svelte.dev/) a JS frontend framework.
+SvelteKit is the latest development from [Svelte](svelte.dev/) a JS frontend framework.
 
 ## Why
 
-This is for those wanting to try svelte-kit on something simple like a markdown blog.
+This is for those wanting to try SvelteKit on something simple like a markdown blog.
 It's a collection of information I wish I had when doing this.
 
 ## How-to
 
-- From the [docs](https://svelte.dev/blog/sveltekit-beta), to create a squeletton using the following inside your repo.
-  Note I'm using [pnpm](https://pnpm.js.org/) but it works the same with npm.
+- From the [docs](https://kit.svelte.dev/), to create a squeletton using the following inside your repo.
 
-```bash
-pnpm init svelte@next
-pnpm install
-pnpm run dev -- --open
+```sh
+npm init svelte@next my-app
+cd my-app
+npm install
+npm run dev -- --open
 ```
 
 - From there, you can use [Svelte-adder](https://github.com/svelte-add/svelte-adders).
-  The svelte ecosystem has [mdsvex](https://github.com/pngwn/MDsveX) for markdown.
-  [Tailwind jit](https://github.com/tailwindlabs/tailwindcss-jit) is the latest feature from tailwind
+  The Svelte ecosystem has [mdsvex](https://github.com/pngwn/MDsveX) for markdown.
+  [Tailwind JIT](https://github.com/tailwindlabs/tailwindcss-jit) is the latest feature from tailwind
   From their docs run
 
-```bash
-# adds markdown capabilities
-pnpx svelte-add mdsvex
-# adds tailwind with the latest jit version
-pnpx svelte-add tailwind --jit
-pnpm install
+```sh
+npx svelte-add mdsvex
+npx svelte-add tailwind --jit
+npm install
 ```
 
-- You can add metadata to your markdown posts by adding a simple header. [example here](https://github.com/happysalada/svelte.megzari.com/blob/master/src/routes/blog/about_this_site.svx#L1)
+- You can add metadata to your markdown posts by adding a simple header. [example here](https://github.com/MikeBild/mikebild.com/blob/master/src/routes/blog/about_this_site.md)
 
 ```md
 ---
 title: 'About this site'
 slug: 'about_this_site'
 outline: 'A brief reference to the technologies used to create this website'
-tags: [{ name: 'Svelte Kit', link: 'https://kit.svelte.dev/' }, { name: 'Tailwind', link: 'https://www.tailwindcss.com' }, { name: 'Markdown', link: 'https://www.markdownguide.org/' }]
-published_at: '3 April 2021'
+tags: [{ name: 'SvelteKit', link: 'https://kit.svelte.dev/' }, { name: 'Tailwind', link: 'https://www.tailwindcss.com' }, { name: 'Markdown', link: 'https://www.markdownguide.org/' }]
+published_at: '16 August 2021'
 ---
 ```
 
-- You can then load those metadata on a blog page (listing your posts).
-  Your `/blog/index.svelte` file, would look like this
+- You can then load those metadata on a blog page (listing your posts). Your `/blog/index.svelte` file, would look like this
 
 ```svelte
 <script context="module" lang="ts">
-  const posts = import.meta.glob('./*.svx');
+  const posts = import.meta.glob('./*.md');
 
-  let body = [];
+  const body = [];
 
   for (const path in posts) {
     body.push(posts[path]().then(({ metadata }) => metadata));
   }
-  /**
-   * @type {import('@sveltejs/kit').Load}
-   */
+
   export async function load({ page, fetch }) {
     const posts = await Promise.all(body);
+
     return {
       props: {
         posts,
@@ -99,11 +95,10 @@ published_at: '3 April 2021'
 </script>
 ```
 
-Let's break this down a little.
-Svelte allows you to do glob imports.
+Let's break this down a little. SvelteKit allows you to do glob imports.
 This code will look for all your svx (Svelte markdown format) file and import them.
 Since the import returns a promise, you need to load those metadata asychronously.
-Svelte kit has a [load](https://kit.svelte.dev/docs#loading) mechanism to fetch data on page load.
+SvelteKit has a [load](https://kit.svelte.dev/docs#loading) mechanism to fetch data on page load.
 This load function will just pass your posts metadata to your component as posts.
 To access the posts, the rest of the file would contain something like
 
@@ -133,40 +128,17 @@ To access the posts, the rest of the file would contain something like
 
 ## Deploying
 
-Svelte kit has many different [adapters](https://kit.svelte.dev/docs#adapters) (plugins to help you deploy).
+SvelteKit has many different [adapters](https://kit.svelte.dev/docs#adapters) (plugins to help you deploy).
 The static one (prerendering your site as a collection of static files) is straightforward to use.
 Just edit your `svelte.config.cjs` file and replace `node` with `static`.
-This results in the following
-
-```
-.svelte/output/client/_app/manifest.json                                        2.39kb
-.svelte/output/client/_app/pages/blog/$layout.svelte-15c7d878.js                0.87kb / brotli: 0.49kb
-.svelte/output/client/_app/pages/index.svelte-8cf46f23.js                       2.75kb / brotli: 1.01kb
-.svelte/output/client/_app/pages/blog/index.svelte-ab90d80a.js                  4.17kb / brotli: 1.62kb
-.svelte/output/client/_app/pages/about.svelte-c6560fc6.js                       6.19kb / brotli: 2.05kb
-.svelte/output/client/_app/chunks/preload-helper-9f12a5fd.js                    0.61kb / brotli: 0.31kb
-.svelte/output/client/_app/chunks/Tag-477f1a5b.js                               0.85kb / brotli: 0.48kb
-.svelte/output/client/_app/chunks/vendor-ec995bb0.js                            5.58kb / brotli: 2.16kb
-.svelte/output/client/_app/assets/pages/index.svelte-30757b45.css               0.10kb / brotli: 0.06kb
-.svelte/output/client/_app/assets/pages/about.svelte-6797c172.css               0.21kb / brotli: 0.13kb
-.svelte/output/client/_app/assets/pages/blog/$layout.svelte-a450408d.css        0.21kb / brotli: 0.12kb
-.svelte/output/client/_app/assets/pages/blog/about_this_site.svx-9f6439a2.css   0.33kb / brotli: 0.13kb
-.svelte/output/client/_app/assets/start-dacc1f14.css                            11.68kb / brotli: 2.71kb
-.svelte/output/client/_app/start-d48e6ca0.js                                    24.83kb / brotli: 7.43kb
-.svelte/output/client/_app/pages/blog/about_this_site.svx-057db07d.js           16.71kb / brotli: 4.71kb
-```
 
 Those files could be smaller, but for a JS framework, the result is pretty impressive!
-I used [wrangler](https://github.com/cloudflare/wrangler) to deploy as a cloudflare worker.
-Honestly though, I don't think it makes much of a difference if you use your other preferred way
-(all are free).
+I used [AWS-CDK](https://github.com/cloudflare/wrangler) to deploy as a static website into AWS S3 and CloudFront as CDN.
 
 ## Conclusion
 
-Is worth learning svelte (if you don't already know it) to deploy a static blog?
-Probably not! However if you ever feel like trying, now you have a simple project to do so!
+Is worth learning Svelte (if you don't already know it) to deploy a static blog? Probably not! However if you ever feel like trying, now you have a simple project to do so!
 
-Is it overkill to use a Svelte for a static blog?
-Most definitely! But at least with this guide you won't waste time doing it! 😄
+Is it overkill to use a Svelte for a static blog? Most definitely! But at least with this guide you won't waste time doing it! 😄
 
-Are there any benefits then? Graphically, svelte enables you to do [really cool things](https://svelte.dev/examples#animate).
+Are there any benefits then? Graphically, Svelte enables you to do [really cool things](https://svelte.dev/examples#animate).

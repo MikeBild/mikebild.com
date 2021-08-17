@@ -1,6 +1,6 @@
 # Mike Bild's personal website
 
-... [Live](https://mikebild.com) using
+... [Live](https://me.ikebild.com) using
 
 - [SvelteKit](https://kit.svelte.dev) as static website generator
 - [Tailwind CSS](https://tailwindcss.com/) CSS utilities

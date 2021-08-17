@@ -1,10 +1,10 @@
 <script context="module" lang="ts">
   import projects from '$lib/projects';
 
-  export async function load({ page, fetch }) {
+  export async function load({ page, fetch }: any) {
     return {
       props: {
-        projects,
+        projects: projects.filter((project: any) => !project.isDraft),
       },
     };
   }

@@ -1,5 +1,6 @@
 export default [
   {
+    isDraft: true,
     title: 'My Project',
     description: 'Example ...',
     client: {
