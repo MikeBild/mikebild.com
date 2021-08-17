@@ -26,7 +26,6 @@
   <title>Blog</title>
 </svelte:head>
 
-<!--Title-->
 <div>
   <h1 class="break-normal text-white pt-6 pb-2 text-3xl md:text-4xl">Recent posts</h1>
   <ul class="list-none">
