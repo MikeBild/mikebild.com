@@ -15,7 +15,7 @@
 {#if !loaded}
   <section class="overflow-x-hidden w-screen relative">
     <div class="fade-in h-screen flex flex-col items-center justify-center">
-      <h1 class="font-sans text-white sm:text-xl lg:text-3xl">AWESOMENESS!</h1>
+      <h1 class="font-sans text-white sm:text-xl lg:text-3xl">CODING</h1>
       <div class="lds-heart"><div /></div>
     </div>
   </section>
@@ -25,7 +25,7 @@
       <Nav path={$page.path} />
     </nav>
 
-    <main class="main h-full">
+    <main class="main h-full text-white font-sans">
       <slot />
     </main>
 

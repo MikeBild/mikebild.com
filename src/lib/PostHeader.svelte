@@ -10,8 +10,8 @@
 </svelte:head>
 
 <!--Title-->
-<div class="font-sans mb-10">
-  <h1 class="font-sans break-normal text-white pt-6 pb-2 text-3xl md:text-4xl">
+<div class="mb-10">
+  <h1 class="break-normal text-white pt-6 pb-2 text-3xl md:text-4xl">
     {title}
   </h1>
   <p class="text-sm md:text-base font-normal text-gray-500">

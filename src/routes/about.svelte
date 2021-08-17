@@ -20,11 +20,11 @@
 </svelte:head>
 
 <div class="content-grid">
-  <div class="content w-full text-xl leading-normal text-white" style="font-family: Georgia, serif;">
+  <div class="content w-full text-xl leading-normal text-white">
     <div style="height: 60vh;">
-      <div class="font-sans">
+      <div>
         <h1
-          class="font-sans break-normal text-white pt-6 
+          class="break-normal text-white pt-6 
           pb-2 text-3xl md:text-4xl"
         >
           About me
