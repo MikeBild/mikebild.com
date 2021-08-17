@@ -3,5 +3,7 @@
     &copy; 2021 Mike Bild
     <br class="xl:hidden" />
     All rights reserved.
+    <br class="xl:hidden" />
+    <a href="/imprint" alt="imprint>Imprint</a>
   </p>
 </div>
