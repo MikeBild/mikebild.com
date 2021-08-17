@@ -1,22 +1,23 @@
 ---
 title: "Impressum"
 ---
+
 # Impressum
 
-Angaben gemäß § 5 TMG
+**Angaben gemäß § 5 TMG**
 
 Mike Bild  
 Grottkauer Str. 8  
 12621 Berlin
 
-Vertreten durch:  
+**Vertreten durch:**
 Mike Bild
 
-Kontakt:  
+**Kontakt:**  
 Telefon: 0171 6015424  
 E-Mail: info@mikebild.com
 
-Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:  
+**Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:**  
 Mike Bild  
 Grottkauer Str. 8  
 12621 Berlin
