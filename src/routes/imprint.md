@@ -18,8 +18,7 @@ Grottkauer Str. 8
 Mike Bild
 
 **Kontakt:**  
-Telefon: 0171 6015424  
-E-Mail: info@mikebild.com
+E-Mail: info at mikebild dot com
 
 **Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:**  
 Mike Bild  
