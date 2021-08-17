@@ -2,6 +2,10 @@
 title: "Impressum"
 ---
 
+<script>
+  import './page.css'
+</script>
+
 # Impressum
 
 **Angaben gemäß § 5 TMG**

@@ -7,7 +7,7 @@ published_at: '16 August 2021'
 ---
 
 <script>
-  import './markdown.css'
+  import '../page.css'
   import PostHeader from '$lib/PostHeader.svelte'
 </script>
 
