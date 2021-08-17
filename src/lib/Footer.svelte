@@ -4,6 +4,6 @@
     <br class="xl:hidden" />
     All rights reserved.
     <br class="xl:hidden" />
-    <a href="/imprint" alt="imprint>Imprint</a>
+    <a href="/imprint" alt="imprint">Imprint</a>
   </p>
 </div>
