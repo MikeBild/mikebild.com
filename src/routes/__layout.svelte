@@ -26,7 +26,11 @@
     </nav>
 
     <main class="main h-full text-white font-sans">
-      <slot />
+      <div class="main-grid">
+        <div class="content w-full text-xl leading-normal text-white">
+          <slot />
+        </div>
+      </div>
     </main>
 
     <footer class="footer">
@@ -55,5 +59,19 @@
 
   .footer {
     grid-area: footer;
+  }
+  
+  .main-grid {
+    display: grid;
+    grid-template-columns: 15vw 70vw 15vw;
+    grid-template-rows: 10vh minmax(60vh, auto) 10vh;
+    grid-template-areas:
+      '. . .'
+      '. content .'
+      '. . .';
+  }
+
+  .content {
+    grid-area: content;
   }
 </style>
