@@ -3,10 +3,9 @@
   import Nav from '$lib/Nav.svelte';
   import Footer from '$lib/Footer.svelte';
   import { onMount } from 'svelte';
+  import { page } from '$app/stores';
 
   let loaded = false;
-
-  import { page } from '$app/stores';
   onMount(async () => {
     loaded = true;
   });
@@ -60,7 +59,7 @@
   .footer {
     grid-area: footer;
   }
-  
+
   .main-grid {
     display: grid;
     grid-template-columns: 15vw 70vw 15vw;

@@ -9,9 +9,10 @@
 
   export async function load({ page, fetch }) {
     const result = await Promise.all(body);
+
     return {
       props: {
-        posts: result,
+        posts: result.filter((x) => !x.isDraft),
       },
     };
   }
