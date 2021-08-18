@@ -2,13 +2,12 @@
 title: 'Svelte in a nutshell'
 slug: 'svelte_in_a_nutshell'
 outline: 'A brief tutorial to Svelte'
-tags: [{ name: 'Svelte', link: 'https://svelte.dev/' }, { name: 'Tutorial' }]
+tags: [{ name: 'Svelte', link: 'https://svelte.dev/' }, { name: 'Tutorial' }, {name: 'English'}]
 published_at: '16 August 2021'
 is_draft: true
 ---
 
 <script>
-  import '../page.css'
   import PostHeader from '$lib/PostHeader.svelte'
 </script>
 
