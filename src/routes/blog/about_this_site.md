@@ -3,7 +3,7 @@ title: 'Making a static blog with SvelteKit, tailwind and markdown'
 slug: 'about_this_site'
 outline: 'A brief reference to the technologies used to create this website'
 tags: [{ name: 'SvelteKit', link: 'https://kit.svelte.dev/' }, { name: 'Tailwind CSS', link: 'https://www.tailwindcss.com' }, { name: 'Markdown', link: 'https://www.markdownguide.org/' }]
-publishedAt: '3 April 2021'
+published_at: '3 April 2021'
 ---
 
 <script>
@@ -11,7 +11,7 @@ publishedAt: '3 April 2021'
   import PostHeader from '$lib/PostHeader.svelte'
 </script>
 
-<PostHeader {title} {publishedAt} {tags} />
+<PostHeader {title} {published_at} {tags} />
 
 ## Table of Content
 
@@ -67,7 +67,7 @@ title: 'About this site'
 slug: 'about_this_site'
 outline: 'A brief reference to the technologies used to create this website'
 tags: [{ name: 'SvelteKit', link: 'https://kit.svelte.dev/' }, { name: 'Tailwind', link: 'https://www.tailwindcss.com' }, { name: 'Markdown', link: 'https://www.markdownguide.org/' }]
-publishedAt: '16 August 2021'
+published_at: '16 August 2021'
 ---
 ```
 
@@ -106,7 +106,7 @@ To access the posts, the rest of the file would contain something like
 <ul class="list-none">
   {#each posts as { title, tags, outline, slug }}
     <li class="list-none">
-      <a class="text-blue-500 space-y-3" rel="prefetch" href="blog/{slug}">
+      <a class="text-yellow-500 space-y-3" rel="prefetch" href="blog/{slug}">
         <h2>
           {title}
         </h2>

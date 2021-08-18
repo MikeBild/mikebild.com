@@ -8,11 +8,11 @@
   }
 
   export async function load({ page, fetch }) {
-    const result = await Promise.all(body);
+    const posts = await Promise.all(body);
 
     return {
       props: {
-        posts: result.filter((x) => !x.isDraft),
+        posts,
       },
     };
   }
@@ -30,23 +30,42 @@
 <div>
   <h1 class="break-normal text-white pt-6 pb-2 text-3xl md:text-4xl">Recent posts</h1>
   <ul class="list-none">
-    {#each posts as { title, tags, outline, slug }}
+    {#each posts as { title, tags, outline, slug, is_draft }}
       <li class="list-none">
-        <a class="text-blue-500 space-y-3 no-underline hover:no-underline" rel="prefetch" href="blog/{slug}">
-          <h2>
-            {title}
-          </h2>
+        {#if !is_draft}
+          <a class="text-yellow-500 space-y-3 no-underline hover:no-underline" rel="prefetch" href="blog/{slug}">
+            <h2>
+              {title}
+            </h2>
 
-          <p class="text-white text-base">
-            {outline}
-          </p>
+            <p class="text-white text-base">
+              {outline}
+            </p>
 
-          <p class="text-sm font-normal text-gray-500">
-            Tags: {#each tags as tag}
-              <Tag {tag} />
-            {/each}
-          </p>
-        </a>
+            <p class="text-sm font-normal text-gray-500">
+              Tags: {#each tags as tag}
+                <Tag {tag} />
+              {/each}
+            </p>
+          </a>
+        {:else}
+          <a class="text-gray-500 space-y-3 no-underline hover:no-underline" href="/blog">
+            <h2>
+              {title}
+            </h2>
+
+            <p class="text-white text-base">
+              {outline}
+            </p>
+
+            <p class="text-sm font-normal text-gray-500">
+              Tags: <Tag tag={{ name: 'Comming soon!' }} />
+              {#each tags as tag}
+                <Tag {tag} />
+              {/each}
+            </p>
+          </a>
+        {/if}
       </li>
     {/each}
   </ul>

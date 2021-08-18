@@ -9,7 +9,7 @@
   </h2>
   <p class="mt-3 md:mt-10 text-base md:text-xl">
     For:
-    <a href="https://www.mystays.com/" class="leading-6 text-blue-500 hover:text-blue-300">
+    <a href="https://www.mystays.com/" class="leading-6 text-yellow-500 hover:text-yellow-300">
       {project.client.name}
     </a>
     - {project.client.caption}

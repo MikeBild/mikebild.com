@@ -21,7 +21,7 @@
     <div class="md:hidden">
       <button
         on:click={toggleOpen}
-        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white transition duration-150 ease-in-out bg-transparent"
+        class="inline-flex items-center justify-center p-2 text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white transition duration-150 ease-in-out bg-transparent"
       >
         <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
           <path class={open ? 'hidden' : 'inline-flex'} stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -41,26 +41,26 @@
 
 <style>
   .nav-default {
-    @apply px-3 py-2 rounded-md text-sm leading-5 font-medium  transition duration-150 ease-in-out;
+    @apply px-3 py-2 text-sm leading-5 font-medium transition duration-150 ease-in-out;
   }
 
   .nav-default:focus {
-    @apply ring text-blue-500 bg-black;
+    @apply ring text-yellow-500 bg-black;
   }
 
   .nav-active {
-    @apply text-blue-500 border-2 border-blue-500;
+    @apply text-yellow-500 border-2 border-yellow-500;
   }
 
   .nav-active:hover {
-    @apply text-black bg-blue-500;
+    @apply text-black bg-yellow-500 no-underline;
   }
 
   .nav-inactive {
-    @apply text-white;
+    @apply text-white border-2 border-black;
   }
 
   .nav-inactive:hover {
-    @apply text-black bg-blue-500;
+    @apply text-black bg-yellow-500 no-underline;
   }
 </style>

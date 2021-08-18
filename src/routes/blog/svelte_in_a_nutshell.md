@@ -3,8 +3,8 @@ title: 'Svelte in a nutshell'
 slug: 'svelte_in_a_nutshell'
 outline: 'A brief tutorial to Svelte'
 tags: [{ name: 'Svelte', link: 'https://svelte.dev/' }, { name: 'Tutorial' }]
-publishedAt: '16 August 2021'
-isDraft: true
+published_at: '16 August 2021'
+is_draft: true
 ---
 
 <script>
@@ -12,7 +12,7 @@ isDraft: true
   import PostHeader from '$lib/PostHeader.svelte'
 </script>
 
-<PostHeader {title} {publishedAt} {tags} />
+<PostHeader {title} {published_at} {tags} />
 
 ## Table of Content
 

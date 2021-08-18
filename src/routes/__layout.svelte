@@ -11,10 +11,17 @@
   });
 </script>
 
+<svelte:head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" as="style" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
+</svelte:head>svelte:head>
+
 {#if !loaded}
   <section class="overflow-x-hidden w-screen relative">
     <div class="fade-in h-screen flex flex-col items-center justify-center">
-      <h1 class="font-sans text-white sm:text-xl lg:text-3xl">CODING</h1>
+      <h1 class="text-white sm:text-xl lg:text-3xl">CODING</h1>
       <div class="lds-heart"><div /></div>
     </div>
   </section>
@@ -24,7 +31,7 @@
       <Nav path={$page.path} />
     </nav>
 
-    <main class="main h-full text-white font-sans">
+    <main class="main h-full text-white">
       <div class="main-grid">
         <div class="content w-full text-xl leading-normal text-white">
           <slot />
