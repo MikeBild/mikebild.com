@@ -70,7 +70,7 @@
   .main-grid {
     display: grid;
     grid-template-columns: 15vw 70vw 15vw;
-    grid-template-rows: 0 minmax(60vh, auto) 0;
+    grid-template-rows: 0 minmax(60vh, auto) 5vh;
     grid-template-areas:
       '. . .'
       '. content .'
