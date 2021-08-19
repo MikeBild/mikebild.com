@@ -14,7 +14,7 @@
     {title}
   </h1>
   <p class="text-sm font-normal text-gray-500">
-    Tags: {#each tags as tag}
+    {#each tags as tag}
       <Tag {tag} />
     {/each}
   </p>
