@@ -19,7 +19,7 @@
   <title>About Mike Bild</title>
 </svelte:head>
 
-<div style="height: 60vh;">
+<div>
   <div>
     <h1
       class="break-normal text-white pt-6 
