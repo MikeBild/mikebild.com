@@ -31,13 +31,10 @@
   <p class="py-6">
     I'm a software developer who thinks of programming as a form of craft, engineering and art! I want to make software to facilitate the creation and running of cooperatives.
     <br />
+    Contact me if you're a cooperative and you are having problems that others potentially share.    
     <br />
-    I'm quite interested in MTB and Gravel biking and also in surfing and sailing. Contact me if you're a cooperative and you are having problems that others potentially share.
+    Personally I'm quite interested in Travel, Bikepacking, MTB and Gravel biking, ski touring and also in SUP, surfing and sailing. 
     <br />
-    <br />
-    info at mikebild dot com
-    <br />
-
     <br />
     {#if projects.length}
       Here is my portfolio
