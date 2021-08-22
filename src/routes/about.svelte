@@ -29,8 +29,8 @@
     </h1>
   </div>
   <p class="py-6">
-    I'm a software engineer with focus to <a href="/serverless-consulting" target="_self">AWS serverless-consulting</a> 
-    and a <a href="/graphql-specialist" target="_self">GraphQL Specialist</a> who 
+    I'm a software engineer with focus to <a href="/aws-serverless-consultant" target="_self">AWS serverless consulting</a>, 
+    <a href="/graphql-expert" target="_self">GraphQL</a> and a <a href="/graphql-expert" target="_self">Frontend development</a> who 
     thinks of programming as a form of craft, engineering and art! I want to make software to facilitate the creation and running of cooperatives.
     <br />
     Contact me if you're a cooperative and you are having problems that others potentially share.    

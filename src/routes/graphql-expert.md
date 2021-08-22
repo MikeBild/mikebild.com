@@ -1,5 +1,5 @@
 ---
-title: 'GraphQL Specialist'
+title: 'GraphQL Expert'
 tags: [{ name: 'CQRS' }, { name: 'Domain-Driven Design' }, { name: 'Event Sourcing' }, { name: 'DynamoDB' }, { name: 'GraphQL' }, { name: 'Design' }, { name: 'Architecture' }, { name: 'JAMStack' }, { name: 'Serverless' }, { name: 'AppSync' }]
 ---
 

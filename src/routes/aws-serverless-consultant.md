@@ -1,5 +1,5 @@
 ---
-title: 'AWS Serverless Consulting'
+title: 'AWS Serverless Consultant'
 tags: [{name: 'TypeScript'}, {name: 'JavaScript'}, { name: 'SvelteKit', link: 'https://kit.svelte.dev/' }, { name: 'Tailwind CSS', link: 'https://www.tailwindcss.com' }, { name: 'React' }, { name: 'CQRS' }, { name: 'Domain-Driven Design' }, { name: 'Event Sourcing' }, { name: 'DynamoDB' }, { name: 'GraphQL' }, { name: 'Svelte' }, { name: 'Gatsby' }, { name: 'Serverless' }, { name: 'AppSync' }, { name: 'IoT' }, { name: 'NodeJS' }, { name: 'TDD' }, { name: 'CI/CD' }]
 ---
 
