@@ -21,10 +21,11 @@ published_at: '12 May 2021'
 - [How-to](#how-to)
 - [Deploying](#deploying)
 - [Conclusion](#conclusion)
+- [Resources](#resources)
 
 ## TLDR
 
-This site was created using [SvelteKit](https://kit.svelte.dev/), [Tailwind CSS](https://www.tailwindcss.com) and [markdown](https://www.markdownguide.org/).
+This site was created using [SvelteKit](https://kit.svelte.dev/), [Tailwind CSS](https://www.tailwindcss.com) and [Markdown](https://www.markdownguide.org/).
 If you're interested, you can check [the source code](https://github.com/mikebild/mikebild.com)
 
 ## Context
@@ -137,3 +138,7 @@ I used [AWS-CDK](https://github.com/aws/aws-cdk) to deploy as a static website i
 ## Conclusion
 
 Is worth learning Svelte (if you don't already know it) to deploy a static blog? Probably not! However if you ever feel like trying, now you have a simple project to do so! Is it overkill to use a Svelte for a static blog? Most definitely! But at least with this guide you won't waste time doing it!
+
+## Resources
+
+- [SvelteKit Blog Demo](https://github.com/svelteland/svelte-kit-blog-demo)

@@ -21,6 +21,7 @@ is_draft: true
 - [Why](#why)
 - [How-to](#how-to)
 - [Conclusion](#conclusion)
+- [Resouces](#resources)
 
 ## TLDR
 
@@ -41,3 +42,5 @@ TBD
 ## Conclusion
 
 TBD
+
+## Resources
