@@ -1,13 +1,12 @@
 ---
-title: 'Making a static blog with SvelteKit, tailwind and markdown'
+title: 'Making a static blog with SvelteKit, Tailwind CSS and Markdown'
 slug: 'about_this_site'
 outline: 'A brief reference to the technologies used to create this website'
-tags: [{ name: 'SvelteKit', link: 'https://kit.svelte.dev/' }, { name: 'Tailwind CSS', link: 'https://www.tailwindcss.com' }, { name: 'Markdown', link: 'https://www.markdownguide.org/' }]
-published_at: '3 April 2021'
+tags: [{name: 'English'}, { name: 'SvelteKit', link: 'https://kit.svelte.dev/' }, { name: 'Tailwind CSS', link: 'https://www.tailwindcss.com' }, { name: 'Markdown', link: 'https://www.markdownguide.org/' }]
+published_at: '12 May 2021'
 ---
 
 <script>
-  import '../page.css'
   import PostHeader from '$lib/PostHeader.svelte'
 </script>
 
@@ -22,10 +21,11 @@ published_at: '3 April 2021'
 - [How-to](#how-to)
 - [Deploying](#deploying)
 - [Conclusion](#conclusion)
+- [Resources](#resources)
 
 ## TLDR
 
-This site was created using [SvelteKit](https://kit.svelte.dev/), [Tailwind CSS](https://www.tailwindcss.com) and [markdown](https://www.markdownguide.org/).
+This site was created using [SvelteKit](https://kit.svelte.dev/), [Tailwind CSS](https://www.tailwindcss.com) and [Markdown](https://www.markdownguide.org/).
 If you're interested, you can check [the source code](https://github.com/mikebild/mikebild.com)
 
 ## Context
@@ -63,11 +63,11 @@ npm install
 
 ```md
 ---
-title: 'About this site'
+title: 'Making a static blog with SvelteKit, Tailwind CSS and Markdown'
 slug: 'about_this_site'
 outline: 'A brief reference to the technologies used to create this website'
-tags: [{ name: 'SvelteKit', link: 'https://kit.svelte.dev/' }, { name: 'Tailwind', link: 'https://www.tailwindcss.com' }, { name: 'Markdown', link: 'https://www.markdownguide.org/' }]
-published_at: '16 August 2021'
+tags: [{name: 'English'}, { name: 'SvelteKit', link: 'https://kit.svelte.dev/' }, { name: 'Tailwind CSS', link: 'https://www.tailwindcss.com' }, { name: 'Markdown', link: 'https://www.markdownguide.org/' }]
+published_at: '12 May 2021'
 ---
 ```
 
@@ -130,15 +130,15 @@ To access the posts, the rest of the file would contain something like
 
 SvelteKit has many different [adapters](https://kit.svelte.dev/docs#adapters) (plugins to help you deploy).
 The static one (prerendering your site as a collection of static files) is straightforward to use.
-Just edit your `svelte.config.cjs` file and replace `node` with `static`.
+Just edit your `svelte.config.js` file and replace `node` with `static`.
 
 Those files could be smaller, but for a JS framework, the result is pretty impressive!
-I used [AWS-CDK](https://github.com/cloudflare/wrangler) to deploy as a static website into AWS S3 and CloudFront as CDN.
+I used [AWS-CDK](https://github.com/aws/aws-cdk) to deploy as a static website into AWS S3 and CloudFront as CDN.
 
 ## Conclusion
 
-Is worth learning Svelte (if you don't already know it) to deploy a static blog? Probably not! However if you ever feel like trying, now you have a simple project to do so!
+Is worth learning Svelte (if you don't already know it) to deploy a static blog? Probably not! However if you ever feel like trying, now you have a simple project to do so! Is it overkill to use a Svelte for a static blog? Most definitely! But at least with this guide you won't waste time doing it!
 
-Is it overkill to use a Svelte for a static blog? Most definitely! But at least with this guide you won't waste time doing it! 😄
+## Resources
 
-Are there any benefits then? Graphically, Svelte enables you to do [really cool things](https://svelte.dev/examples#animate).
+- [SvelteKit Blog Demo](https://github.com/svelteland/svelte-kit-blog-demo)

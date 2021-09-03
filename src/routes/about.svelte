@@ -19,7 +19,7 @@
   <title>About Mike Bild</title>
 </svelte:head>
 
-<div style="height: 60vh;">
+<div>
   <div>
     <h1
       class="break-normal text-white pt-6 
@@ -29,15 +29,14 @@
     </h1>
   </div>
   <p class="py-6">
-    I'm a software developer who thinks of programming as a form of craft, engineering and art! I want to make software to facilitate the creation and running of cooperatives.
+    I'm a software engineer with focus to <a href="/aws-serverless-consultant" target="_self">AWS serverless cloud consulting</a>, 
+    <a href="/graphql-expert" target="_self">GraphQL API design and integration</a> and a <a href="/frontend-developer" target="_self">Frontend development using React and Svelte</a> who 
+    thinks of programming as a form of craft, engineering and art! I want to make software to facilitate the creation and running of cooperatives.
     <br />
+    Contact me if you're a cooperative and you are having problems that others potentially share.    
     <br />
-    I'm quite interested in MTB and Gravel biking and also in surfing and sailing. Contact me if you're a cooperative and you are having problems that others potentially share.
+    Personally I'm quite interested in Travel, Bikepacking, MTB and Gravel biking, ski touring and also in SUP, surfing and sailing. 
     <br />
-    <br />
-    info at mikebild dot com
-    <br />
-
     <br />
     {#if projects.length}
       Here is my portfolio

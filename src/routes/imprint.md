@@ -6,7 +6,7 @@ title: 'Impressum'
   import './page.css'
 </script>
 
-# Impressum
+# {title}
 
 ## Angaben gemäß § 5 TMG
 
