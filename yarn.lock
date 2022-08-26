@@ -134,6 +134,11 @@
   dependencies:
     "@types/node" "*"
 
+"@types/unist@^2.0.0", "@types/unist@^2.0.2", "@types/unist@^2.0.3":
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/@types/unist/-/unist-2.0.6.tgz#250a7b16c3b91f672a24552ec64678eeb1d3a08d"
+  integrity sha512-PBjIUxZHOuj0R15/xuwJYjFi+KZdNFrehocChv4g5hu6aFroHue8m0lBP0POdK2nKzbw0cgV1mws8+V/JAcEkQ==
+
 anymatch@~3.1.2:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/anymatch/-/anymatch-3.1.2.tgz#c0557c096af32f106198f4f4e2a383537e378716"
@@ -620,6 +625,16 @@ magic-string@^0.26.2:
   dependencies:
     sourcemap-codec "^1.4.8"
 
+mdsvex@0.10.6:
+  version "0.10.6"
+  resolved "https://registry.yarnpkg.com/mdsvex/-/mdsvex-0.10.6.tgz#5ba975f4616e5255ca31cd93d33e2c2a22845631"
+  integrity sha512-aGRDY0r5jx9+OOgFdyB9Xm3EBr9OUmcrTDPWLB7a7g8VPRxzPy4MOBmcVYgz7ErhAJ7bZ/coUoj6aHio3x/2mA==
+  dependencies:
+    "@types/unist" "^2.0.3"
+    prism-svelte "^0.4.7"
+    prismjs "^1.17.1"
+    vfile-message "^2.0.4"
+
 merge2@^1.3.0:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/merge2/-/merge2-1.4.1.tgz#4368892f885e907455a6fd7dc55c0c9d404990ae"
@@ -758,6 +773,16 @@ prettier@2.7.1:
   version "2.7.1"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.7.1.tgz#e235806850d057f97bb08368a4f7d899f7760c64"
   integrity sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==
+
+prism-svelte@^0.4.7:
+  version "0.4.7"
+  resolved "https://registry.yarnpkg.com/prism-svelte/-/prism-svelte-0.4.7.tgz#fbc6709450b4e2ed660ddb82c3718817fc584cbe"
+  integrity sha512-yABh19CYbM24V7aS7TuPYRNMqthxwbvx6FF/Rw920YbyBWO3tnyPIqRMgHuSVsLmuHkkBS1Akyof463FVdkeDQ==
+
+prismjs@^1.17.1:
+  version "1.29.0"
+  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.29.0.tgz#f113555a8fa9b57c35e637bba27509dcf802dd12"
+  integrity sha512-Kx/1w86q/epKcmte75LNrEoT+lX8pBpavuAbvJWRXar7Hz8jrtF+e3vY751p0R8H9HdArwaCTNDDzHg/ScJK1Q==
 
 punycode@^2.1.1:
   version "2.1.1"
@@ -927,10 +952,10 @@ svelte@3.49.0:
   resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.49.0.tgz#5baee3c672306de1070c3b7888fc2204e36a4029"
   integrity sha512-+lmjic1pApJWDfPCpUUTc1m8azDqYCG1JN9YEngrx/hUyIcFJo6VZhj0A1Ai0wqoHcEIuQy+e9tk+4uDgdtsFA==
 
-sveltekit-adapter-aws@4.2.5:
-  version "4.2.5"
-  resolved "https://registry.yarnpkg.com/sveltekit-adapter-aws/-/sveltekit-adapter-aws-4.2.5.tgz#dc3e8d0316b28715ecbc29bdc8b17981de766fc4"
-  integrity sha512-9Mu6/vDwGp4VkbETS4x5SvIpQmdoWUu8FqBnFbOx5CYIp8qwxIk0XiW5X7BbLSDbslnGARhY67fjdQerjJUoGw==
+sveltekit-adapter-aws@4.2.6:
+  version "4.2.6"
+  resolved "https://registry.yarnpkg.com/sveltekit-adapter-aws/-/sveltekit-adapter-aws-4.2.6.tgz#81ff54d57b6fd8982b0c0ce0dfbb83d1c4ba06d2"
+  integrity sha512-Jyh76/rN3uQjjt5/9wrH+MzXKwDsJ4Qhg8U/n2dokxqmwoUoYnZ1USRUo3wz5vduthR54ntZMl9q9yp/MrnPng==
   dependencies:
     "@aws-cdk/aws-apigatewayv2-alpha" "2.39.0-alpha.0"
     "@aws-cdk/aws-apigatewayv2-integrations-alpha" "2.39.0-alpha.0"
@@ -979,6 +1004,13 @@ undici@^5.8.1:
   resolved "https://registry.yarnpkg.com/undici/-/undici-5.10.0.tgz#dd9391087a90ccfbd007568db458674232ebf014"
   integrity sha512-c8HsD3IbwmjjbLvoZuRI26TZic+TSEe8FPMLLOkN1AfYRhdjnKBU6yL+IwcSCbdZiX4e5t0lfMDLDCqj4Sq70g==
 
+unist-util-stringify-position@^2.0.0:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/unist-util-stringify-position/-/unist-util-stringify-position-2.0.3.tgz#cce3bfa1cdf85ba7375d1d5b17bdc4cada9bd9da"
+  integrity sha512-3faScn5I+hy9VleOq/qNbAd6pAx7iH5jYBMS9I1HgQVijz/4mv5Bvw5iw1sC/90CODiKo81G/ps8AJrISn687g==
+  dependencies:
+    "@types/unist" "^2.0.2"
+
 universalify@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/universalify/-/universalify-2.0.0.tgz#75a4984efedc4b08975c5aeb73f530d02df25717"
@@ -988,6 +1020,14 @@ update-dotenv@1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/update-dotenv/-/update-dotenv-1.1.1.tgz#17146f302f216c3c92419d5a327a45be910050ca"
   integrity sha512-3cIC18In/t0X/yH793c00qqxcKD8jVCgNOPif/fGQkFpYMGecM9YAc+kaAKXuZsM2dE9I9wFI7KvAuNX22SGMQ==
+
+vfile-message@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/vfile-message/-/vfile-message-2.0.4.tgz#5b43b88171d409eae58477d13f23dd41d52c371a"
+  integrity sha512-DjssxRGkMvifUOJre00juHoP9DPWuzjxKuMDrhNbk2TdaYYBNMStsNhEOt3idrtI12VQYM/1+iM0KOzXi4pxwQ==
+  dependencies:
+    "@types/unist" "^2.0.0"
+    unist-util-stringify-position "^2.0.0"
 
 vite@3.0.9:
   version "3.0.9"

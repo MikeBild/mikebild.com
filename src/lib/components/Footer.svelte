@@ -1,6 +1,6 @@
 <footer class="container">
 	<div class="grid">
-		<a href="/imprint">imprint</a>
+		<a href="/impressum">impressum</a>
 	</div>
 	<br />
 	<p>
